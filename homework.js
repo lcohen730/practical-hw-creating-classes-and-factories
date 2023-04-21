@@ -76,37 +76,25 @@ class Person {
 
 const timmy = new Person('Timmy', this.age, this.height, this.weight, this.mood, this.hamsters, this.bankAccount)
 
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-// console.log(timmy)
-
-timmy.eat()
-timmy.eat()
-timmy.eat()
-timmy.eat()
-timmy.eat()
-// console.log(timmy)
-
-timmy.exercise()
-timmy.exercise()
-timmy.exercise()
-timmy.exercise()
-timmy.exercise()
-// console.log(timmy)
-
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-// console.log(timmy)
+for (let i = 0; i < 5; i++) {
+    timmy.ageUp()
+  }
+  // console.log(timmy)
+  
+  for (let i = 0; i < 5; i++) {
+    timmy.eat()
+  }
+  // console.log(timmy)
+  
+  for (let i = 0; i < 5; i++) {
+    timmy.exercise()
+  }
+  // console.log(timmy)
+  
+  for (let i = 0; i < 9; i++) {
+    timmy.ageUp()
+  }
+  // console.log(timmy)
 
 const gus = new Hamster(this.owner, 'Gus', this.price)
 console.log(gus)
@@ -117,21 +105,9 @@ console.log(gus)
 timmy.buyHamster(gus)
 // console.log(timmy)
 
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
-timmy.ageUp()
+for (let i = 0; i < 15; i++) {
+    timmy.ageUp()
+  }
 // console.log(timmy)
 
 timmy.eat()
@@ -139,3 +115,35 @@ timmy.eat()
 timmy.exercise()
 timmy.exercise()
 console.log(timmy)
+
+class Dinner {
+    constructor(appetizer, entree, dessert) {
+          this.appetizer = appetizer;
+          this.entree = entree;
+          this.dessert = dessert;
+      }
+  }
+  
+  /* class Chef {
+    constructor(mealType, appetizer, entree, dessert) {
+      if (mealType === 'mexican') {
+        return new Dinner('empanadas', 'tacos', 'tres leches cake')
+      }
+      return new Dinner(appetizer, entree, dessert)
+    }
+  } */
+  
+  class Chef {
+    constructor(appetizer, entree, dessert) {
+      return new Dinner(appetizer, entree, dessert)
+    }
+  }
+  
+  
+  const mexican = new Chef('empanadas', 'tacos', 'tres leches cake')
+  const sushi = new Chef('spring rolls', 'unagi maki', 'mochi')
+  const italian = new Chef('arancini', 'ravioli', 'tiramisu')
+  
+  console.log(mexican)
+  console.log(sushi)
+  console.log(italian)
